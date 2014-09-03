@@ -1,19 +1,15 @@
-from django.http import HttpResponse
-from django.template import RequestContext, loader
 from django.shortcuts import render
-
-
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
-from rest_framework import permissions, renderers, viewsets
-from rest_framework.decorators import link
-from rest_framework.response import Response
+from django.views.decorators.csrf import csrf_protect
+from rest_framework import permissions, viewsets
 
 from tweeter.models import Tweet
 from tweeter.permissions import IsAuthorOrReadOnly
 from tweeter.serializers import TweetSerializer, UserSerializer
 
 
+@csrf_protect
 def index(request):
     user = authenticate(username='bob', password='bob')
     if user is not None:
