@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
-from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import csrf_protect, ensure_csrf_cookie
 from rest_framework import permissions, viewsets
 
 from tweeter.models import Tweet
@@ -10,6 +10,7 @@ from tweeter.serializers import TweetSerializer, UserSerializer
 
 
 @csrf_protect
+@ensure_csrf_cookie
 def index(request):
     user = authenticate(username='bob', password='bob')
     if user is not None:
