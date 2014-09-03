@@ -5,11 +5,10 @@ from django.shortcuts import render
 
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
-from rest_framework import permissions
-from rest_framework import renderers
-from rest_framework import viewsets
+from rest_framework import permissions, renderers, viewsets
 from rest_framework.decorators import link
 from rest_framework.response import Response
+
 from tweeter.models import Tweet
 from tweeter.permissions import IsAuthorOrReadOnly
 from tweeter.serializers import TweetSerializer, UserSerializer
