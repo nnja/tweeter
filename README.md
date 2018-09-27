@@ -1,6 +1,8 @@
 tweeter
 =======
 
+### **Note:** this project uses an out of date version of django, django rest framework, and angular js. Use it only for reference purposes.
+
 A sample application to show the strengths of Angular and Django
 
 Slides are available here: http://www.slideshare.net/nnja/djangocon-2014-angular-django
@@ -9,17 +11,19 @@ Companion Video from DjangoCon 2014 is available here: https://www.youtube.com/w
 
 **Installation Instructions**
 
-1. Clone the project.
+1. Clone the project. `git clone https://github.com/nnja/tweeter`
 
-2. Create a new virtual environment. `mkvirtualenv tweeter`
+1. `cd` intro the project directory `cd tweeter`.
 
-3. `cd` intro the project directory, and install dependencies from requirements.txt via `pip install -r requirements.txt`
+1. Create a new virtual environment. `mkvirtualenv tweeter` and activate it.
 
-4. create tables and load fixtures. `python manage.py syncdb`
+1. Install dependencies from requirements.txt via `pip install -r requirements.txt`
 
-5. Run the server via: `python manage.py runserver`
+1. Create tables and load fixtures. `python manage.py syncdb`
 
-6. The application will be available at <a href="http://localhost:8000" target="_blank">http://localhost:8000</a>
+1. Run the server via: `python manage.py runserver`
+
+1. The application will be available at <a href="http://localhost:8000" target="_blank">http://localhost:8000</a>
 
 **Preview**
 
